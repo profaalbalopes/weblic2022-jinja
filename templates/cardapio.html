@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+  {% if promocao == True %}
+  <img src="/static/promo.png" width="80px">
+  {% endif %}
+
+  {% if porcentagem == "10" %}
+  <p style="color: orange">Hoje temos {{porcentagem}}% de desconto </p>
+  
+  {% elif porcentagem == "20" %}
+  <p style="color: green">Hoje temos {{porcentagem}}% de desconto </p>
+  
+  {% else %}
+  <p>Hoje não temos desconto </p>
+ 
+  {% endif %}
+
+  <ul>
+    <li>Frango com Catupiry</li>  
+    <li>Sertaneja</li>     
+  </ul>  
+
+{% endblock %}

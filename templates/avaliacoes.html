@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+  <ul>
+    {% for i in range(1,11) %}
+    <li>Avaliação do Cliente {{ i }}</li>
+    {% endfor %}
+  </ul>
+
+  <ul>
+    {% for c in clientes %}
+    <li>Avaliação de {{ c }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
