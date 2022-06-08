@@ -13,7 +13,12 @@ def cardapio(porcentagem):
 
 @app.route('/avaliacoes')
 def avaliacoes():
-  clientes = ['Alba', 'Werllan', 'Marcos', 'Kleyton']
+  clientes = [
+    {'nome': 'Alba', 'nota': 5},
+    {'nome': 'Werllan', 'nota': 2}, 
+    {'nome': 'Marcos', 'nota': 3}, 
+    {'nome': 'Kleyton', 'nota': 5}
+  ]
   return render_template('avaliacoes.html', clientes=clientes)
   
 app.run(host='0.0.0.0', port=81)
