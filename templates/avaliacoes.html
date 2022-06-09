@@ -9,7 +9,14 @@
 
   <ul>
     {% for c in clientes %}
-    <li>Avaliação de {{ c.nome }} - Nota: {{ c.nota }}</li>
+    <li>
+      Avaliação de {{ c.nome }} - 
+      Nota: 
+      {% for n in range(c.nota) %}
+        <img src="/static/estrela.png" width="20px">
+      {% endfor %}
+      
+    </li>
     {% endfor %}
   </ul>
 {% endblock %}
